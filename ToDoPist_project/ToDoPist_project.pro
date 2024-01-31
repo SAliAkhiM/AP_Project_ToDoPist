@@ -1,5 +1,7 @@
-QT       += core gui
-
+QT       += core gui \
+    quick
+QT+=network
+QT+=concurrent
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
@@ -10,13 +12,16 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sign_up_page.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    sign_up_page.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    sign_up_page.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

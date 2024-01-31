@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Sign_up_page</class>
+ <widget class="QDialog" name="Sign_up_page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>655</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLineEdit" name="firstName">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string> First Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lastName">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>146</y>
+     <width>133</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Last Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="userName">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>201</y>
+     <width>133</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string> User Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>257</y>
+     <width>133</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string> Password</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="signUp">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>312</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SIGN UP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LogIn">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>369</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>LOG IN</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>257</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>231</x>
+     <y>369</y>
+     <width>133</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Do you have an account?</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
