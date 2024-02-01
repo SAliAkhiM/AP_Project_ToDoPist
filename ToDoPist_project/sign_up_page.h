@@ -39,8 +39,10 @@ private slots:
     void discardSocket();
     void displayError(QAbstractSocket::SocketError socketError);
 
-    void displayMessage(const QString& str);
+    //void displayMessage(const QString& str);
     void on_signUp_clicked();
+
+    void on_LogIn_clicked();
 
 private:
     Ui::Sign_up_page *ui;

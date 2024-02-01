@@ -1,5 +1,7 @@
 #include "sign_up_page.h"
 #include "ui_sign_up_page.h"
+#include "mainwindow.h"
+
 
 Sign_up_page::Sign_up_page(QWidget *parent) :
     QDialog(parent),
@@ -8,7 +10,7 @@ Sign_up_page::Sign_up_page(QWidget *parent) :
     ui->setupUi(this);
     socket = new QTcpSocket(this);
 
-    connect(this, &Sign_up_page::newMessage, this, &Sign_up_page::displayMessage);
+    //connect(this, &Sign_up_page::newMessage, this, &Sign_up_page::displayMessage);
     connect(socket, &QTcpSocket::readyRead, this, &Sign_up_page::readSocket);
     connect(socket, &QTcpSocket::disconnected, this, &Sign_up_page::discardSocket);
     connect(socket, &QAbstractSocket::errorOccurred, this, &Sign_up_page::displayError);
@@ -135,5 +137,12 @@ void Sign_up_page::readSocket()
         QString message = QString("%1 :: %2").arg(socket->socketDescriptor()).arg(QString::fromStdString(buffer.toStdString()));
         emit newMessage(message);
     }
+}
+
+
+void Sign_up_page::on_LogIn_clicked()
+{
+    MainWindow* m = new MainWindow;
+    m->show();
 }
 
