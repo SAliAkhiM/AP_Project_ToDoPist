@@ -5,4 +5,12 @@
         <file>360_F_446590854_kdN5mTOjIxhpuvMAPf2TkvSNPxiKzSde.jpg</file>
         <file>360_F_368716732_msiYVzAbh0qwov9JOYqcNzoKdgEnkJ6M.jpg</file>
     </qresource>
+    <qresource prefix="/Background">
+        <file>f1 car gif.gif</file>
+        <file>pist gif.gif</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>show.png</file>
+        <file>hide.png</file>
+    </qresource>
 </RCC>

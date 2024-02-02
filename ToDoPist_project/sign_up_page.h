@@ -42,7 +42,7 @@ private slots:
     //void displayMessage(const QString& str);
     void on_signUp_clicked();
 
-    void on_LogIn_clicked();
+    void on_back_clicked();
 
 private:
     Ui::Sign_up_page *ui;

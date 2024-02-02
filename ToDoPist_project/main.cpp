@@ -1,13 +1,20 @@
 #include "mainwindow.h"
-#include "sign_up_page.h"
+#include "Logo.h"
 #include <QApplication>
 #include <QPropertyAnimation>
+#include "user.h"
+#include "Data.h"
+
+QVector<user>::iterator Data::it;
+QVector<user> Data::users;
+
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    Sign_up_page * su= new Sign_up_page();
-    su->show();
+    Logo logo;
+    logo.show();
     return a.exec();
 
 }

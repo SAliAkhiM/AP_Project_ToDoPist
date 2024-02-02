@@ -1,11 +1,38 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QNetworkInterface>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     myServer = new QTcpServer();
+    QList<QHostAddress> ipAddressesList;
 
+       // Retrieve list of network interfaces
+       QList<QNetworkInterface> interfaces = QNetworkInterface::allInterfaces();
+
+       // Iterate through each network interface
+       for (const QNetworkInterface& iface : interfaces) {
+           // Filter out loopback and inactive interfaces
+           if (iface.flags().testFlag(QNetworkInterface::IsUp) &&
+               !iface.flags().testFlag(QNetworkInterface::IsLoopBack)) {
+
+               // Retrieve list of IP addresses associated with the interface
+               QList<QNetworkAddressEntry> entries = iface.addressEntries();
+
+               // Iterate through each IP address entry
+               for (const QNetworkAddressEntry& entry : entries) {
+                   // Add the IP address to the list
+                   ipAddressesList.append(entry.ip());
+               }
+           }
+       }
+
+       // Print the IP addresses
+       qDebug() << "Your IP addresses:";
+       for (const QHostAddress& ipAddress : ipAddressesList) {
+           qDebug() << ipAddress.toString();
+       }
     if(myServer->listen(QHostAddress::Any, 8080))
     {
        connect(this, &MainWindow::newMessage, this, &MainWindow::displayMessage);

@@ -71,27 +71,14 @@
   <widget class="QPushButton" name="signUp">
    <property name="geometry">
     <rect>
-     <x>231</x>
-     <y>312</y>
+     <x>320</x>
+     <y>350</y>
      <width>75</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>SIGN UP</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="LogIn">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>370</y>
-     <width>75</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>LOG IN</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox">
@@ -107,17 +94,17 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
-     <x>231</x>
-     <y>369</y>
-     <width>171</width>
-     <height>16</height>
+     <x>210</x>
+     <y>350</y>
+     <width>75</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Do you have an account?</string>
+    <string>Back</string>
    </property>
   </widget>
  </widget>
