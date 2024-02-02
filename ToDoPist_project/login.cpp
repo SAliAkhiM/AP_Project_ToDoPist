@@ -6,6 +6,7 @@
 #include "Data.h"
 #include "user.h"
 #include "sign_up_page.h"
+#include "mainwindow.h"
 
 LogIn::LogIn(QWidget *parent) :
     QMainWindow(parent),
@@ -95,8 +96,10 @@ void LogIn::on_pushButton_clicked()
                 return;
             }
         }
-    QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
-
+//    QMessageBox::warning(this, "تذکر", "نام کاربری یافت نشد!");
+//    this->close();
+//    MainWindow* m = new MainWindow;
+//    m->show();
 }
 
 

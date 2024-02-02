@@ -1,4 +1,4 @@
-#include "Logo.h"
+#include "Logo.h"//perhaps better to make it logo.h
 #include "ui_logo.h"
 #include "login.h"
 
